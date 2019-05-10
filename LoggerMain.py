@@ -2,9 +2,11 @@ import re
 import scapy
 
 
-txt = input("enter text here")
+txt = input("enter path: ")
 
-x = re.search("blue", txt)
+f = open(txt, "r")
+cleartxt = f.read()
+x = re.search("blue", cleartxt)
 
 if (x):
   print("YES! We have a match!")
