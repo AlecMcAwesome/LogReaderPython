@@ -1,4 +1,4 @@
-﻿No.     Time           Source                Destination           Protocol Length Info
+No.     Time           Source                Destination           Protocol Length Info
       1 0.000000000    192.168.0.10          195.249.209.144       TCP      68     42402 → 80 [ACK] Seq=1 Ack=1 Win=245 Len=0 TSval=235052411 TSecr=1940532597
 
 Frame 1: 68 bytes on wire (544 bits), 68 bytes captured (544 bits) on interface 0
