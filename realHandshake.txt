@@ -1,0 +1,141 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000000    192.168.80.1          192.168.80.255        UDP      86     57621 → 57621 Len=44
+
+Frame 1: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface 0
+Ethernet II, Src: Vmware_c0:00:08 (00:50:56:c0:00:08), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Internet Protocol Version 4, Src: 192.168.80.1, Dst: 192.168.80.255
+User Datagram Protocol, Src Port: 57621, Dst Port: 57621
+Data (44 bytes)
+
+0000  53 70 6f 74 55 64 70 30 6b f1 3a 84 7b 3c b8 9f   SpotUdp0k.:.{<..
+0010  00 01 00 04 48 95 c2 03 f7 ad 75 08 40 3a 65 bf   ....H.....u.@:e.
+0020  96 dc 3d 07 64 1a 7c 0b 55 a9 ce ff               ..=.d.|.U...
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 1.115089507    192.168.80.128        192.168.80.254        DHCP     342    DHCP Request  - Transaction ID 0x5eeb1432
+
+Frame 2: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface 0
+Ethernet II, Src: Vmware_fa:01:8a (00:0c:29:fa:01:8a), Dst: Vmware_e4:36:ed (00:50:56:e4:36:ed)
+Internet Protocol Version 4, Src: 192.168.80.128, Dst: 192.168.80.254
+User Datagram Protocol, Src Port: 68, Dst Port: 67
+Bootstrap Protocol (Request)
+
+No.     Time           Source                Destination           Protocol Length Info
+      3 1.115293078    192.168.80.254        192.168.80.128        DHCP     342    DHCP ACK      - Transaction ID 0x5eeb1432
+
+Frame 3: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface 0
+Ethernet II, Src: Vmware_e4:36:ed (00:50:56:e4:36:ed), Dst: Vmware_fa:01:8a (00:0c:29:fa:01:8a)
+Internet Protocol Version 4, Src: 192.168.80.254, Dst: 192.168.80.128
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Bootstrap Protocol (ACK)
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 1.280017530    Vmware_97:46:06       Broadcast             ARP      60     Who has 192.168.80.128? Tell 192.168.80.130
+
+Frame 4: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+Ethernet II, Src: Vmware_97:46:06 (00:0c:29:97:46:06), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 1.280031814    Vmware_fa:01:8a       Vmware_97:46:06       ARP      42     192.168.80.128 is at 00:0c:29:fa:01:8a
+
+Frame 5: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: Vmware_fa:01:8a (00:0c:29:fa:01:8a), Dst: Vmware_97:46:06 (00:0c:29:97:46:06)
+Address Resolution Protocol (reply)
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 1.300163377    192.168.80.130        192.168.80.128        TCP      60     2497 → 443 [SYN] Seq=0 Win=8192 Len=0
+
+Frame 6: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+Ethernet II, Src: Vmware_97:46:06 (00:0c:29:97:46:06), Dst: Vmware_fa:01:8a (00:0c:29:fa:01:8a)
+Internet Protocol Version 4, Src: 192.168.80.130, Dst: 192.168.80.128
+Transmission Control Protocol, Src Port: 2497, Dst Port: 443, Seq: 0, Len: 0
+    Source Port: 2497
+    Destination Port: 443
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 0    (relative sequence number)
+    [Next sequence number: 0    (relative sequence number)]
+    Acknowledgment number: 0
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x002 (SYN)
+    Window size value: 8192
+    [Calculated window size: 8192]
+    Checksum: 0x5e2b [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [Timestamps]
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 1.300185356    192.168.80.128        192.168.80.130        TCP      54     443 → 2497 [RST, ACK] Seq=1 Ack=1 Win=0 Len=0
+
+Frame 7: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 0
+Ethernet II, Src: Vmware_fa:01:8a (00:0c:29:fa:01:8a), Dst: Vmware_97:46:06 (00:0c:29:97:46:06)
+Internet Protocol Version 4, Src: 192.168.80.128, Dst: 192.168.80.130
+Transmission Control Protocol, Src Port: 443, Dst Port: 2497, Seq: 1, Ack: 1, Len: 0
+    Source Port: 443
+    Destination Port: 2497
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 1    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x014 (RST, ACK)
+    Window size value: 0
+    [Calculated window size: 0]
+    [Window size scaling factor: -2 (no window scaling used)]
+    Checksum: 0x7e18 [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+    [Timestamps]
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 1.384450834    192.168.80.130        192.168.80.128        TCP      60     [TCP Previous segment not captured] 2497 → 443 [ACK] Seq=2 Ack=2 Win=8192 Len=0
+
+Frame 8: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+Ethernet II, Src: Vmware_97:46:06 (00:0c:29:97:46:06), Dst: Vmware_fa:01:8a (00:0c:29:fa:01:8a)
+Internet Protocol Version 4, Src: 192.168.80.130, Dst: 192.168.80.128
+Transmission Control Protocol, Src Port: 2497, Dst Port: 443, Seq: 2, Ack: 2, Len: 0
+    Source Port: 2497
+    Destination Port: 443
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 2    (relative sequence number)
+    [Next sequence number: 2    (relative sequence number)]
+    Acknowledgment number: 2    (relative ack number)
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+    Window size value: 8192
+    [Calculated window size: 8192]
+    [Window size scaling factor: -2 (no window scaling used)]
+    Checksum: 0x5e1a [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+    [Timestamps]
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 1.384481722    192.168.80.128        192.168.80.130        TCP      54     443 → 2497 [RST] Seq=2 Win=0 Len=0
+
+Frame 9: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 0
+Ethernet II, Src: Vmware_fa:01:8a (00:0c:29:fa:01:8a), Dst: Vmware_97:46:06 (00:0c:29:97:46:06)
+Internet Protocol Version 4, Src: 192.168.80.128, Dst: 192.168.80.130
+Transmission Control Protocol, Src Port: 443, Dst Port: 2497, Seq: 2, Len: 0
+    Source Port: 443
+    Destination Port: 2497
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 2    (relative sequence number)
+    [Next sequence number: 2    (relative sequence number)]
+    Acknowledgment number: 0
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x004 (RST)
+    Window size value: 0
+    [Calculated window size: 0]
+    [Window size scaling factor: -2 (no window scaling used)]
+    Checksum: 0x8210 [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [Timestamps]
