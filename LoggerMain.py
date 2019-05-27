@@ -1,15 +1,17 @@
 import re
-import scapy
+
+keywords = ["SYN", "RST, ACK"]
+
+f = open("exampleWireshark1.txt", "r")
+cleartxt = f.readlines()
+#x = re.search("Source", cleartxt)
+
+def testFile(txt):
+  for line in txt:
+      for word in keywords:
+          if word in line:
+              print(word)
+              break
 
 
-txt = input("enter path: ")
-
-f = open(txt, "r")
-cleartxt = f.read()
-x = re.search("ganske", cleartxt)
-
-def testFile(x):
-  if (x):
-    print("YES! We have a match!")
-  else:
-    print("No match")
+testFile(cleartxt)
