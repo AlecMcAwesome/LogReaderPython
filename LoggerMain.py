@@ -11,7 +11,7 @@ nrIps = Counter({})
 
 path = input("please type path to log (must be txt file): ")
 try:
-    log = open(path, "r")
+    log = open(path, "r", encoding="utf-8")
     clearTxt = log.readlines()
     resume = open("Resume.txt", "w+")
 except:
