@@ -69,7 +69,7 @@ def verdict():
         else:
             resume.write("logs does not indicate any port sweep attack. Carry on soldier!")
     except:
-        sys.exit("something went wrong on IP side")
+        sys.exit("something went wrong on Verdict side")
 
 
 gatherPorts(clearTxt)
