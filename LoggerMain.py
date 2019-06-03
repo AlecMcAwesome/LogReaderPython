@@ -3,13 +3,12 @@ import socket
 from collections import Counter
 import sys
 
-portPattern = re.compile(
-    r'Destination Port: 21|Destination Port: 23|Destination Port: 25|Destination Port: 53|Destination Port: 80|Destination Port: 110|Destination Port: 111|Destination Port: 135|Destination Port: 139|Destination Port: 143|Destination Port: 445|Destination Port: 993|Destination Port: 995|Destination Port: 1723|Destination Port: 3306|Destination Port: 3389|Destination Port: 5900|Destination Port: 8080')
+portPattern = re.compile(r'Destination Port: 21|Destination Port: 23|Destination Port: 25|Destination Port: 53|Destination Port: 80|Destination Port: 110|Destination Port: 111|Destination Port: 135|Destination Port: 139|Destination Port: 143|Destination Port: 445|Destination Port: 993|Destination Port: 995|Destination Port: 1723|Destination Port: 3306|Destination Port: 3389|Destination Port: 5900|Destination Port: 8080')
 portList = set()
 ipList = set()
 nrIps = Counter({})
 
-path = input("please type path to log (must be txt file): ")
+path = input("please type path to log (is case sensitive and must be .txt file): ")
 try:
     log = open(path, "r", encoding="utf-8")
     clearTxt = log.readlines()
