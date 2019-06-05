@@ -3,7 +3,8 @@ import socket
 from collections import Counter
 import sys
 
-portPattern = re.compile(r'Destination Port: 21|Destination Port: 23|Destination Port: 25|Destination Port: 53|Destination Port: 80|Destination Port: 110|Destination Port: 111|Destination Port: 135|Destination Port: 139|Destination Port: 143|Destination Port: 445|Destination Port: 993|Destination Port: 995|Destination Port: 1723|Destination Port: 3306|Destination Port: 3389|Destination Port: 5900|Destination Port: 8080')
+portPattern = re.compile(
+    r'Destination Port: 21|Destination Port: 23|Destination Port: 25|Destination Port: 53|Destination Port: 80|Destination Port: 110|Destination Port: 111|Destination Port: 135|Destination Port: 139|Destination Port: 143|Destination Port: 445|Destination Port: 993|Destination Port: 995|Destination Port: 1723|Destination Port: 3306|Destination Port: 3389|Destination Port: 5900|Destination Port: 8080')
 portList = set()
 ipList = set()
 nrIps = Counter({})
@@ -26,13 +27,8 @@ def gatherPorts(txt):
         result = portPattern.findall(str(txt))
         for item in result:
             portList.update({item: 1})
-        if len(portList) > 15:
-            print(len(portList))
-            print("port sweep detected, Contact adinistrator")
-            for port in portList:
-                resume.write("%s \n" % port)
-        else:
-            print("no port sweep detected")
+        for port in portList:
+            resume.write("%s \n" % port)
     except:
         sys.exit("Something went wrong on Port side")
 
@@ -65,8 +61,10 @@ def verdict():
         resume.write("\n \nFinal Verdict of log reader: \n\n")
         if len(portList) >= 15:
             resume.write("ports indicate sweep! contact administrator!!")
+            print("Process done check Resume.txt")
         else:
             resume.write("logs does not indicate any port sweep attack. Carry on soldier!")
+            print("Process done check Resume.txt")
     except:
         sys.exit("something went wrong on Verdict side")
 
@@ -74,3 +72,6 @@ def verdict():
 gatherPorts(clearTxt)
 gatherIp(clearTxt)
 verdict()
+
+resume.close()
+log.close()
